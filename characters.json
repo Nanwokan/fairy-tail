@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Natsu",
+    "attack": 88,
+    "defense": 72,
+    "hp": 160
+  },
+  {
+    "name": "Gray",
+    "attack": 80,
+    "defense": 76,
+    "hp": 145
+  },
+  {
+    "name": "Erza",
+    "attack": 90,
+    "defense": 88,
+    "hp": 165
+  },
+  {
+    "name": "Lucy",
+    "attack": 65,
+    "defense": 58,
+    "hp": 120
+  },
+  {
+    "name": "Gajeel",
+    "attack": 84,
+    "defense": 90,
+    "hp": 170
+  },
+  {
+    "name": "Laxus",
+    "attack": 94,
+    "defense": 86,
+    "hp": 175
+  },
+  {
+    "name": "Gildarts",
+    "attack": 98,
+    "defense": 90,
+    "hp": 180
+  },
+  {
+    "name": "Mirajane",
+    "attack": 89,
+    "defense": 78,
+    "hp": 150
+  },
+  {
+    "name": "Mystogan",
+    "attack": 87,
+    "defense": 80,
+    "hp": 145
+  },
+  {
+    "name": "Makarov",
+    "attack": 92,
+    "defense": 84,
+    "hp": 155
+  }
+]

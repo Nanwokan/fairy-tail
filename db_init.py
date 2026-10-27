@@ -1,34 +1,32 @@
 # initialisation de la base de donnee
+import json
 import pymongo
 
 client = pymongo.MongoClient("mongodb://localhost:27017/")
-
+# connexion base de donnee
 db = client["fairytail"]
 
-# test de reception database
+# Nettoyer la base des anciennes donnees
+db.characters.drop()
+db.ennemies.drop()
+db.scores.drop()
 
-collection_characters = db["characters"]
-characters = collection_characters.find()
-
-for character in characters:
-    print("-------------Character-------------")
-    print(character)
-    print("-----------------------------------")
-
-
-collection_rivals = db["rivals"]
-rivals = collection_rivals.find()
-
-for rival in rivals:
-    print("-------------Rivals-------------")
-    print(rival)
-    print("-----------------------------------")
+# lire le fichier .json 
+with open ("characters.json", "r") as file :
+    characters = json.load(file)
+# creer une collection et y inserer le jeu de donnee
+db.characters.insert_many(characters)
 
 
-collection_scores =db["scores"]
-scores = collection_scores.find()
+# lire le fichier .json 
+with open ("ennemies.json", "r") as file :
+    ennemies = json.load(file)
+# creer une collection et y inserer le jeu de donnee
+db.ennemies.insert_many(ennemies)
 
-for score in scores:
-    print("-------------Scores-------------")
-    print(score)
-    print("-----------------------------------")
+
+# lire le fichier .json 
+with open ("scores.json", "r") as file :
+    scores = json.load(file)
+# creer une collection et y inserer le jeu de donnee
+db.scores.insert_many(scores)

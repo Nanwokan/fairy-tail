@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Bora",
+    "attack": 45,
+    "defense": 40,
+    "hp": 100
+  },
+  {
+    "name": "Erigor",
+    "attack": 58,
+    "defense": 52,
+    "hp": 115
+  },
+  {
+    "name": "Jose Porla",
+    "attack": 72,
+    "defense": 68,
+    "hp": 140
+  },
+  {
+    "name": "Deliora",
+    "attack": 78,
+    "defense": 75,
+    "hp": 155
+  },
+  {
+    "name": "Zero",
+    "attack": 84,
+    "defense": 74,
+    "hp": 150
+  },
+  {
+    "name": "Hades",
+    "attack": 92,
+    "defense": 86,
+    "hp": 175
+  },
+  {
+    "name": "Mard Geer",
+    "attack": 94,
+    "defense": 88,
+    "hp": 180
+  },
+  {
+    "name": "Bloodman",
+    "attack": 95,
+    "defense": 90,
+    "hp": 185
+  },
+  {
+    "name": "Zeref",
+    "attack": 99,
+    "defense": 96,
+    "hp": 200
+  },
+  {
+    "name": "Acnologia",
+    "attack": 100,
+    "defense": 98,
+    "hp": 205
+  }
+]
