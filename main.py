@@ -1,4 +1,4 @@
-from utils import create_team, error
+from utils import add_player, error, three_best_players
 
 MENU_OPTIONS = ["Démarrer le jeu","Afficher le classement","Quitter"]
 
@@ -12,7 +12,10 @@ def menu_principal():
   print("------------------FAIRY TAIL GAME------------------")
   for i, option in enumerate(MENU_OPTIONS, start=1):
     print(f"{i} - {option}")
-  
+
+def start_game():
+  player_name=input("saisissez votre pseudo : ")
+  add_player(player_name)
 
 def get_choice (max_options, error):
   while True:
@@ -28,29 +31,17 @@ def get_choice (max_options, error):
 
 menu_principal()
 choice = get_choice(len(MENU_OPTIONS),error)
-# Demarrer le jeu
-#   saisir le pseudo du joueur
-#   creer son equipe
-# def start_game():
-#    player_name = input("Saisissez votre pseudo : ")
-#    return player_name
-#    create_team()
-# constituer son equipe
-#   pour chaque character dans la table characters
-#     afficher i+= 1 character["name"]
-#   recuperer les choix utilisateurs
-#   afficher l'equipe actuelle
 
-#sys.exit()
+# while choice ==! 3 :
+if choice == 1:
+  start_game()
+elif choice == 2:
+  three_best_players()
+else:
+  exit()
 
-#while player_choice ==! 3:
-# Tant que le choix est different de 3
-#   si le choix est 1
-#     demarrer le jeu
-#   si le choix est 2
-#     Afficher le classement
-# Sinon 
-# afficher un message d'aurevoir et break
+
+
 
 # MENU = [
 #   "Lancer Jeu",
@@ -60,9 +51,39 @@ choice = get_choice(len(MENU_OPTIONS),error)
 # Menu
 #   Boucle sur tout element de MENU
 #       afficher numero element et texte element
-# 
+# Choix (options, erreur)
+#    while True:
+#        Recuperer choix utilisateur
+#        Verifier si choix est valide
+#        Si valide
+#             return choix
+#        Sinon
+#             Lancer fonction erreur
 # Process
-#    JEU
+#    Demarrer le Jeu
+#         Recuperer le nom du joueur
+#             Verifier si nom valide
+#               valide si nom > 3 caracteres et si non deja dispo dans le db
+#               enregistrer en base de donnee
+#
+#         Recuperer la liste des personnage
+#            ouvrir base
+#            acceder a collection characters
+#            find
+#            Boucle sur tout personnage de la collection characters
+#                afficher numero personnage et nom , attaque, defense et hp
+#             initialiser player_team = []
+#             tant que len(player_team) < 3
+#                 recuperer choix utilisateur 
+#                 Verifier si choix valide
+#                   valide if choix pas deja dans player_team
+#                   ajouter a player_team
+#
+#
+#         Combat infini
+#         
+#         Afficher le score
+#
 #    Afficher les scores
 #        Recuperer scores base
 #            ouvrir base
