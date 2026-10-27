@@ -1,5 +1,5 @@
-from utils import add_player, error, three_best_players
-
+from utils import add_player, characters_list, error, three_best_players
+#create_team, 
 MENU_OPTIONS = ["Démarrer le jeu","Afficher le classement","Quitter"]
 
 
@@ -13,10 +13,6 @@ def menu_principal():
   for i, option in enumerate(MENU_OPTIONS, start=1):
     print(f"{i} - {option}")
 
-def start_game():
-  player_name=input("saisissez votre pseudo : ")
-  add_player(player_name)
-
 def get_choice (max_options, error):
   while True:
 #      Recuperer choix utilisateur
@@ -28,6 +24,13 @@ def get_choice (max_options, error):
     else:
 #             Lancer fonction erreur
       error()
+
+def start_game():
+  player_name=input("Saisissez Votre pseudo : ") 
+  add_player(player_name)
+#  create_team()
+
+
 
 menu_principal()
 choice = get_choice(len(MENU_OPTIONS),error)

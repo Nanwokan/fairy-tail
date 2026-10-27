@@ -1,0 +1,54 @@
+# MENU = [
+#   "Lancer Jeu",
+#   "Afficher les scores",
+#   "Quitter",
+#    ]
+# Menu
+#   Boucle sur tout element de MENU
+#       afficher numero element et texte element
+# Choix (options, erreur)
+#    while True:
+#        Recuperer choix utilisateur
+#        Verifier si choix est valide
+#        Si valide
+#             return choix
+#        Sinon
+#             Lancer fonction erreur
+# Process
+#    Demarrer le Jeu
+#         Recuperer le nom du joueur
+#             Verifier si nom valide
+#               valide si nom > 3 caracteres et si non deja dispo dans le db
+#               enregistrer en base de donnee
+#
+#         Recuperer la liste des personnage
+#            ouvrir base
+#            acceder a collection characters
+#            find
+#            Boucle sur tout personnage de la collection characters
+#                afficher numero personnage et nom , attaque, defense et hp
+#             initialiser player_team = []
+#             tant que len(player_team) < 3
+#                 recuperer choix utilisateur 
+#                 Verifier si choix valide
+#                   valide if choix pas deja dans player_team
+#                   ajouter a player_team
+#
+#
+#         Combat infini
+#         
+#         Afficher le score
+#
+#    Afficher les scores
+#        Recuperer scores base
+#            ouvrir base
+#            acceder a collection score
+#            find
+#            convertir curseur en list
+#        filtrer les 3 meilleurs
+#             trie le tableau sur element.waves
+#             prendre 3 derniers elements
+#                    array[-3:-1]
+#        Affiche les score
+#    Quitter
+#       sys.exit()
