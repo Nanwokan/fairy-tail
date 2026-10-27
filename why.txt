@@ -1,0 +1,6 @@
+pourquoi ca ete plus rapide.
+
+de hier a aujourd'hui je me suis atteler a faire le fichier db_init et le main pour afficher le menu et et autre element ne concernant pas encore le lancement du jeu.
+je dirais que j'avais du mal a bien repartir le fonctionnalites du jeu.
+J'avais decouper en surface et pas en profondeur.
+je ne savais trouvait pas encore la meilleure demarche pour recuperer le choix utilisateur etant donner qu'il y en a plusieur a faire.
