@@ -11,6 +11,7 @@ db.characters.drop()
 db.ennemies.drop()
 db.scores.drop()
 db.players.drop()
+db.teams.drop()
 
 # lire le fichier .json 
 with open ("characters.json", "r") as file :

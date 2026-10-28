@@ -35,9 +35,36 @@
 #                   ajouter a player_team
 #
 #
-#         Combat infini
-#         
-#         Afficher le score
+#           Combat(player_team)
+                initialiser le compteur de vague
+                tant que il y a encore un un perso en vie dans player_team soit len(player_team) > 0
+                    recuperer un monstre au hasard en base 
+                    afficher stat du monstre
+                    tant que monstre.hp > 0 et au moin un perso en vie dans player_team soit len(player_team) > 0
+                        pour chaque perso de player_team
+                            si perso.hp > 0
+                                degats = max(0, perso.attack - monstre.defense)
+                                monstre.hp -+ degats
+
+                                si monstre.hp<=0
+                                    monstre.hp = 0
+                                    break
+                            Sinon
+                                retirer perso de player_team car perso plus en vie
+                        
+                        si monstre.hp > 0
+                            recupere perso team encore en vie 
+                            choisi un perso au hasard
+                            degats = max(0, monstre.attack - perso.defense)
+                            perso.hp -= degats
+
+                            si monstre.hp<=0
+                                break
+                        
+                        waves+=1 
+    #         
+                afficher le score
+                save score with player_name en base donnee    
 #
 #    Afficher les scores
 #        Recuperer scores base
