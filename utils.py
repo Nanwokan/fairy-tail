@@ -1,3 +1,5 @@
+import collections
+
 import pymongo
 
 client = pymongo.MongoClient("mongodb://localhost:27017/")
@@ -28,7 +30,16 @@ def add_player(player_name):
         
     collection_players.insert_one({"player_name":player_name})
     print(f"{player_name} ajoute avec succes")
-    
+
+def pick_random_ennemy():
+   collections_ennemies = db["ennemies"]
+   random = [{"$sample": {"size": 1}}]
+   result = list(collections_ennemies.aggregate(random))
+   ennemy = result[0]
+
+   print(f"Adversaire : {ennemy['name']} - {ennemy['attack']} - {ennemy['defense']} - {ennemy['hp']}")
+   return ennemy
+
     
 def create_team(player_name):
 
@@ -50,10 +61,12 @@ def create_team(player_name):
         player_team.append(chosen_character)
     
     collection_teams.insert_one({"player_name":player_name, "team":player_team})
-
+    
     print("votre team : ")
     for i, character in enumerate(player_team, start=1):
         print(f"{i} - {character["name"]}")
+
+    return player_team
 
 #        Recuperer scores base
 def three_best_players():

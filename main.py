@@ -1,10 +1,11 @@
+from game import game
 from utils import get_choice, add_player, create_team, error, three_best_players
  
 MENU_OPTIONS = ["Démarrer le jeu","Afficher le classement","Quitter"]
 
 
 # Menu principal
-#   1. Démarrer le jeu
+#   1. Démarrer le jeu11
 #   2. Afficher le classement
 #   3. Quitter
 
@@ -18,7 +19,8 @@ def menu_principal():
 def start_game():
   player_name=input("Saisissez Votre pseudo : ") 
   add_player(player_name)
-  create_team(player_name)
+  
+  game(create_team(player_name))
 
 
 

@@ -44,7 +44,7 @@
                         pour chaque perso de player_team
                             si perso.hp > 0
                                 degats = max(0, perso.attack - monstre.defense)
-                                monstre.hp -+ degats
+                                monstre.hp -= degats
 
                                 si monstre.hp<=0
                                     monstre.hp = 0
