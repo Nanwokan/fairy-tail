@@ -25,10 +25,3 @@ with open ("ennemies.json", "r") as file :
     ennemies = json.load(file)
 # creer une collection et y inserer le jeu de donnee
 db.ennemies.insert_many(ennemies)
-
-
-# lire le fichier .json 
-with open ("scores.json", "r") as file :
-    scores = json.load(file)
-# creer une collection et y inserer le jeu de donnee
-db.scores.insert_many(scores)
