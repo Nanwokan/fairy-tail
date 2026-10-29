@@ -71,6 +71,7 @@ def create_team(player_name):
     
     collection_teams.insert_one({"player_name":player_name, "team":player_team})
     display_team()
+    return player_team
 
 
 
